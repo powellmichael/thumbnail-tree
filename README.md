@@ -7,6 +7,7 @@ To run this app clone the repo and run npm install. You can run the app using np
 
 
 ###################
+
 This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
 to quickly bootstrap your angular webapp projects and dev environment for these projects.
 
