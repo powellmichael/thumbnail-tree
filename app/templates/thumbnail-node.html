@@ -1,0 +1,25 @@
+<div ng-repeat="thumb in $ctrl.data track by $index">
+  <ul class="thumbnail-node">
+
+    <li class="thumbnail-item"
+        ng-show="thumb.isVisible || thumb.parent === null"
+        ng-class="{ 'pointer': $ctrl.hasChildNodes(thumb) }"
+        ng-click="$ctrl.toggleChildNode(thumb)">
+
+      <img class="thumbnail mr5"
+           ng-src="{{ thumb.thumbnail.href }}"
+           alt="{{ thumb.thumbnail.description }}">
+      {{ thumb.name }}
+
+      <i ng-if="$ctrl.hasChildNodes(thumb)"
+         class="fa fa-caret-right ml5"
+         ng-class="{ 'arrow-down': thumb.child[0].isVisible }">
+      </i>
+    </li>
+
+    <div ng-if="$ctrl.hasChildNodes(thumb)">
+      <thumbnail-nodes data="thumb.child"></thumbnail-nodes>
+    </div>
+
+  </ul>
+</div>

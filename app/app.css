@@ -1,25 +1,44 @@
 /* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body {
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-.menu:before {
-  content: "[";
+.ml5 {
+  margin-left: 5px;
 }
 
-.menu:after {
-  content: "]";
+.mr5 {
+  margin-right: 5px;
 }
 
-.menu > li {
-  display: inline;
+ul {
+  list-style-type: none;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.thumbnail-node {
+  margin: 10px;
+}
+
+.thumbnail-item {
+  padding: 5px;
+  height: 50px;
+  width: 500px;
+  background-color: #cccccc;
+  border: 1px solid #555555;
+  border-radius: 4px;
+}
+
+.thumbnail {
+  height: 50px;
+  width: 50px;
+  border-radius: 4px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.arrow-down {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
 }
